@@ -1,5 +1,5 @@
 <div class="container">
-    <div id="divContentApontamentos">
+    <div *ngIf="isAngular" id="divContentApontamentos">
         <button (click)="mudarParaReact()">Mudar para o React</button>
         <div class="row">
             <fieldset class="border p-2">
@@ -94,5 +94,7 @@
             </div>
         </div>
     </div>
+    <div [id]="rootId"></div>
 </div>
 <app-detalhes #detalhesModal [workItems]="workItems"></app-detalhes>
+
