@@ -39,7 +39,7 @@ export class Util {
         responsavel = 'William Dias';
         break;
       case "3":
-        responsavel = 'vitor.tramontina';
+        responsavel = 'Vitor Tramontina';
         break;
       case "4":
         responsavel = 'Vinícius Bandeira';
