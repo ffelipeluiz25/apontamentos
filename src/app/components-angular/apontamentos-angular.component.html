@@ -70,12 +70,16 @@
                             </thead>
                             <tbody *ngIf="detailedAppointments.length > 0" class="f-13">
                                 <tr *ngFor="let item of detailedAppointments">
-                                    <td class="text-center" scope="col"> {{item.dataFormatada}}</td>
-                                    <td class="text-center" scope="col"> {{item.diaDaSemana}}</td>
-                                    <td class="text-center" scope="col"> {{item.teamMember}}</td>
-                                    <td width="1%" style="vertical-align: middle">
+                                    <td [ngClass]="item.workItens.length == 0 ? 'red-line': 'text-center'" scope="col">
+                                        {{item.dataFormatada}}</td>
+                                    <td [ngClass]="item.workItens.length == 0 ? 'red-line': 'text-center'" scope="col">
+                                        {{item.diaDaSemana}}</td>
+                                    <td [ngClass]="item.workItens.length == 0 ? 'red-line': 'text-center'" scope="col">
+                                        {{item.teamMember}}</td>
+                                    <td [ngClass]="item.workItens.length == 0 ? 'red-line': 'td-button'">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-secondary m-1"
+                                            <button type="button"
+                                                [ngClass]="item.workItens.length == 0 ? 'btn-detalhes-no-workItens': 'btn btn-secondary mt-1' "
                                                 (click)="detalhes(item)">Detalhes</button>
                                         </div>
                                     </td>
@@ -97,4 +101,3 @@
     <div [id]="rootId"></div>
 </div>
 <app-detalhes #detalhesModal [workItems]="workItems"></app-detalhes>
-
