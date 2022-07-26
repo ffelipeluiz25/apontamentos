@@ -9,7 +9,7 @@ import ReactComponent from './components-react/react';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnChanges, AfterViewInit, OnDestroy {
-  title = 'angularreactapp';
+  title = 'Apontamentos Minds';
 
   ngOnChanges(changes: SimpleChanges) {
   }

@@ -42,7 +42,7 @@ export class Util {
         responsavel = 'Vitor Tramontina';
         break;
       case "4":
-        responsavel = 'Vinícius Bandeira';
+        responsavel = 'Vinicius Bandeira';
         break;
       case "5":
         responsavel = 'Thiago';
@@ -60,7 +60,7 @@ export class Util {
         responsavel = 'Giulia Delarissa';
         break;
       case "10":
-        responsavel = 'Gabriel Guerra';
+        responsavel = 'Gabriel Ribeiro Guerra';
         break;
       case "11":
         responsavel = 'Andre Castro';

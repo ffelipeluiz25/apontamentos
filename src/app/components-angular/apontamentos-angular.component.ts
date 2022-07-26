@@ -64,7 +64,6 @@ export class ApontamentosAngularComponent implements OnInit, OnChanges, AfterVie
   }
 
   async mudarParaReact() {
-    //this.router.navigate(['/apontamentos-react']);
     this.isAngular = false;
     this.render();
   }
