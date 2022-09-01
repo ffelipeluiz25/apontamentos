@@ -1,5 +1,5 @@
 export class Util {
-    
+
   recuperaDiaSemana(data: string) {
     var day = new Date(data).getDay();
     var diaDaSemana = '';
@@ -65,12 +65,44 @@ export class Util {
       case "11":
         responsavel = 'Andre Castro';
         break;
+      case "12":
+        responsavel = 'Luis Henrique Montoni';
+        break;
+      case "13":
+        responsavel = 'Lucas Fernandes';
+        break;
+      case "14":
+        responsavel = 'nelson mendez';
+        break;
+      case "15":
+        responsavel = 'Polyanna Ribeiro';
+        break;
+      case "16":
+        responsavel = 'livia.the';
+        break;
+      case "17":
+        responsavel = 'Janine Carvalho';
+        break;
+      case "18":
+        responsavel = 'Pedro Cezar';
+        break;
+      case "19":
+        responsavel = 'Victor Domingues';
+        break;
+      case "20":
+        responsavel = 'elzio.junior';
+        break;
+      case "21":
+        responsavel = 'Tiago Oliveira';
+        break;
+
+
     }
 
     return responsavel;
 
   }
-  
+
   recuperaMesAtual() {
     var mesAtual = (new Date()).getMonth();
     mesAtual++;

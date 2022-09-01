@@ -69,6 +69,7 @@ export class ApontamentosAngularComponent implements OnInit, OnChanges, AfterVie
   }
 
   async getDetalhes() {
+    debugger;
     await this.api.get('/appointment/details', { period: this.mes + '/1/' + this.ano }, true, true).toPromise().then(result => {
       var list: any[] = [];
       result.detailedAppointments.forEach(async (item: { teamMember: string; dataFormatada: string; date: string; diaDaSemana: string; }) => {
