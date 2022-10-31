@@ -95,7 +95,39 @@ export class Util {
       case "21":
         responsavel = 'Tiago Oliveira';
         break;
-
+      case "22":
+        responsavel = 'Pedro Xavier';
+        break;
+      case "23":
+        responsavel = 'Yuri Edmundo';
+        break;
+      case "24":
+        responsavel = 'Carlos Henrique Marinho Peixoto';
+        break;
+      case "25":
+        responsavel = 'Fernando Lucas Rodrigues Simões';
+        break;
+      case "26":
+        responsavel = 'Leonardo Souza';
+        break;
+      case "27":
+        responsavel = 'Paulo Itsuo Almeida Okino';
+        break;
+      case "28":
+        responsavel = 'Amanda Silva';
+        break;
+      case "29":
+        responsavel = 'Élida Beatriz Gonçalves';
+        break;
+      case "30":
+        responsavel = 'Wilian Alves';
+        break;
+      case "31":
+        responsavel = 'Dalicio Pereira de Novaes Junior';
+        break;
+      case "32":
+        responsavel = 'Luana Assis';
+        break;
 
     }
 
