@@ -3,8 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ApiService } from './servicos/api-servico';
-import { Util } from './utils/utils';
 import { GeradorPdfComponent } from './components-angular/gerador-pdf/gerador-pdf.component';
 
 @NgModule({
@@ -17,7 +15,7 @@ import { GeradorPdfComponent } from './components-angular/gerador-pdf/gerador-pd
     AppRoutingModule,
     FormsModule      
   ],
-  providers: [ApiService, Util],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

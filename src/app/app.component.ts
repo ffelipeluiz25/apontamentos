@@ -5,7 +5,7 @@ import { AfterViewInit, Component, OnChanges, OnDestroy, SimpleChanges } from '@
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnChanges, AfterViewInit, OnDestroy {
-  title = 'Apontamentos Minds';
+  title = 'ORAFAMACEDO';
 
   ngOnChanges(changes: SimpleChanges) {
   }
