@@ -1,0 +1,86 @@
+<nav class="navbar navbar-expand navbar-light bg-secondary d-flex justify-content-between">
+  <div class="navbar-brand mb-0 h1 text-white">ONLINE RESUME</div>
+</nav>
+<br />
+<div class="container-fluid">
+  <form #resumeForm="ngForm">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="shadow-sm card">
+          <div class="card-body">
+            <h4 class="card-title d-flex align-items-center">
+              <div class="col-md-8">
+                <i class="material-icons"> account_box </i>
+                Titulo do Documento
+              </div>
+              <div class="col-md-1">
+                <button class="btn btn-primary remove-titulo" (click)="removeNovaTitulo()">-</button>
+              </div>
+              <div class="col-md-1">
+                <button class="btn btn-primary add-titulo" (click)="addNovaTitulo()">+</button>
+              </div>
+            </h4>
+            <div class="row">
+              <div class="col-md-4" *ngFor="let t of titulos; let i = index">
+                <fieldset class="form-group">
+                  <label for="basicInput">Titulo</label>
+                  <input type="text" class="form-control" name="titulo{{ i }}" [(ngModel)]="t.titulo"
+                    #titulo="ngModel" />
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="shadow-sm card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between card-title">
+              <div class="col-md-8">
+                <h4 class="d-flex align-items-center">
+                  <i class="material-icons"> rule </i>
+                  Rede Sociais e Links
+                </h4>
+              </div>
+              <div class="col-md-1">
+                <button class="btn btn-primary remove-rede-social" (click)="removeNovaRedeSocial()">-</button>
+              </div>
+              <div class="col-md-1">
+                <button class="btn btn-primary" (click)="addNovaRedeSocial()">+</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4" *ngFor="let rs of redesSociais; let i = index">
+                <fieldset class="form-group">
+                  <label for="basicInput">Rede Social</label>
+                  <input type="text" class="form-control" name="rede{{ i }}" [(ngModel)]="rs.nome_rede_social"
+                    #nome_rede_social="ngModel" />
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="basicInput">Link da Rede Social</label>
+                  <input type="text" class="form-control" name="link{{ i }}" [(ngModel)]="rs.link_rede_social"
+                    #link_rede_social="ngModel" />
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="shadow-sm card action-buttons">
+          <button (click)="resumeForm.valid ? generatePdf('download') : ''"
+            class="btn btn-secondary d-flex align-items-center justify-content-center mb-1">
+            <i class="material-icons"> cloud_download </i><span>&nbsp;Download PDF</span>
+          </button>
+          <button (click)="resumeForm.valid ? generatePdf('print') : ''"
+            class="btn btn-secondary d-flex align-items-center justify-content-center mb-1">
+            <i class="material-icons"> print </i><span>&nbsp;Print PDF</span>
+          </button>
+          <button (click)="resetForm()"
+            class="btn btn-secondary d-flex align-items-center justify-content-center mb-1">
+            <i class="material-icons"> clear </i><span>&nbsp;Limpar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
